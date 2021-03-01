@@ -1,0 +1,31 @@
+//colours
+$light-gray: rgb(221, 221, 221);
+$charcoal: rgb(34, 40, 49);
+$navy: rgb(48, 71, 94);
+$red: rgb(240, 84, 84);
+
+//fonts
+$primary-font: Neoteric;
+$secondary-font: Consolas;
+
+//functions
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: $light-gray;
+    color: $charcoal;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
