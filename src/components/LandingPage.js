@@ -1,6 +1,6 @@
 import React from 'react';
 import triangles from '../triangles.svg';
-import arrow from '../arrow.svg';
+import Footer from './Footer';
 
 const LandingPage = () => {
     return (
@@ -28,9 +28,7 @@ const LandingPage = () => {
                         <button>contact me</button>
                     </div>
                 </div>
-                <footer>
-                    <img src={arrow} alt=""></img>
-                </footer>
+            <Footer />
         </div>
       </section>
     );

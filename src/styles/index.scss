@@ -29,3 +29,19 @@ section {
     width: 100%;
     height: 100vh;
 }
+
+#red {
+  color: $red;
+}
+#navy {
+  color: $navy;
+}
+
+footer {
+  @include flexCenter(row);
+  img {
+      width: 3rem;
+      height: auto;
+      cursor: pointer;
+  }
+}

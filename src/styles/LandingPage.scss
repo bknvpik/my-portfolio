@@ -41,12 +41,6 @@
             font-family: $secondary-font;
             div {
                 text-indent: 4rem;
-                #red {
-                    color: $red;
-                }
-                #navy {
-                    color: $navy;
-                }
             }
         }
     }
@@ -80,11 +74,5 @@
     footer {
         grid-row-start: 3;
         grid-column-start: 2;
-        @include flexCenter(row);
-        img {
-            width: 3rem;
-            height: auto;
-            cursor: pointer;
-        }
     }
 }
