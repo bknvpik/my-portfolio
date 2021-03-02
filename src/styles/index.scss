@@ -37,6 +37,14 @@ section {
   color: $navy;
 }
 
+header {
+  @include flexCenter(row);
+  grid-row-start: 1;
+  grid-column-start: 2;
+  font-family: $secondary-font;
+  font-size: 70px;
+}
+
 footer {
   @include flexCenter(row);
   img {
@@ -44,4 +52,11 @@ footer {
       height: auto;
       cursor: pointer;
   }
+}
+
+.img-container {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  @include flexCenter(column);
 }

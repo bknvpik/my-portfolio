@@ -6,13 +6,6 @@
     display: grid;
     grid-template-rows: 15% 1fr 15%;
     grid-template-columns: 300px 1fr 300px;
-    header {
-        grid-row-start: 1;
-        grid-column-start: 2;
-        font-family: $secondary-font;
-        font-size: 70px;
-        @include flexCenter(row);
-    }
     #about-me-wrapper {
         grid-row-start: 2;
         grid-column-start: 2;
@@ -23,14 +16,9 @@
             font-size: 50px;
             text-align: center;
         }
-        #img-container {
+        img {
+            height: 4rem;
             display: inline-block;
-            position: relative;
-            @include flexCenter(column);
-            img {
-                height: 4rem;
-                display: inline-block;
-            }
         }
         #hobbies {
             font-family: $primary-font;

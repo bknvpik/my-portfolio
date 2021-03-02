@@ -1,0 +1,26 @@
+@import 'index';
+
+#my-skills {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 15% 70% 15%;
+    #skills-bg {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        background-image: url('../images/skills-bg.svg');
+        background-size: cover;
+        background-position: center;
+    }
+    #skills {
+        @include flexCenter(column);
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+    footer {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+}

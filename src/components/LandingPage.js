@@ -1,5 +1,5 @@
 import React from 'react';
-import triangles from '../triangles.svg';
+import triangles from '../images/triangles.svg';
 import Footer from './Footer';
 
 const LandingPage = () => {
@@ -15,13 +15,13 @@ const LandingPage = () => {
                     <div id="landing-left">
                         <p id="hi">Hi, my name is</p>
                         <h1 id="my-name">Bartosz.</h1>
-                        <p id="whoami">
+                        <div id="whoami">
                             &#123;
                             <br/>
                                 <div>I am learning to</div>
                                 <div>become a <span id="red">front</span>-<span id="navy">end</span> dev</div>
                             &#125;
-                        </p>
+                        </div>
                     </div>
                     <div id="landing-right">
                         <img src={triangles} alt=""></img>
