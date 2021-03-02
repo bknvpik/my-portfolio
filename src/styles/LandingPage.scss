@@ -49,6 +49,12 @@
         grid-column-start: 2;
         display: inline-block;
 	    position: relative;
+        .img-container {
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            @include flexCenter(column);
+        }
         img {
             height: auto;
             display: inline-block;

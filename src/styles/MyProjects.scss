@@ -1,0 +1,13 @@
+@import 'index';
+
+#my-projects {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 15% 70% 15%;
+    footer {
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+}

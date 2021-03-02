@@ -12,7 +12,7 @@ const AboutMe = () => {
                 <div id="about-me-wrapper">
                     <div id="info">
                         I am young, ambitious and creative person, that is looking for opportunities to develop myself, 
-                        gain experience and expand my knowledge in web design. 
+                        gain experience and expand my knowledge in web development. 
                         I am a fan of minimalism and I pay a lot of attention to details
                     </div>
                     <div className="img-container"><img src={triangles} alt="'"></img></div>
