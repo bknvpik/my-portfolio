@@ -15,6 +15,23 @@
             cursor: pointer;
             font-size: 45px;
         }
+        .fa-linkedin {
+            &:hover {
+              color: rgb(0, 119, 181)
+            }
+          }
+          
+          .fa-facebook-square {
+            &:hover {
+              color: rgb(59, 89, 152)
+            }
+          }
+          
+          .fa-github-square {
+            &:hover {
+              color: rgb(23, 21, 21)
+            }
+          }
     }
     #landing-wrapper {
         grid-column-start: 2;
@@ -75,6 +92,12 @@
             position: absolute;
             right: 0;
             bottom: 0;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background: $navy;
+            }
         }
     }
     footer {

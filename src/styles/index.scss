@@ -54,9 +54,9 @@ footer {
   }
 }
 
-.img-container {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  @include flexCenter(column);
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $charcoal;
 }

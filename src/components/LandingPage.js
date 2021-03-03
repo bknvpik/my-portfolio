@@ -7,9 +7,9 @@ const LandingPage = () => {
         <section>
             <div id="landing-page">
                 <header>
-                    <i className="fab fa-linkedin"></i>
-                    <i className="fab fa-facebook-square"></i>
-                    <i className="fab fa-github-square"></i>
+                    <a href="https://www.linkedin.com/in/bartosz-knapik-089532208/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/barteknapik/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a>
+                    <a href="https://github.com/bknvpik" target="_blank" rel="noreferrer"><i className="fab fa-github-square"></i></a>
                 </header>
                 <div id="landing-wrapper">
                     <div id="landing-left">
@@ -25,7 +25,7 @@ const LandingPage = () => {
                     </div>
                     <div id="landing-right">
                         <img src={triangles} alt=""></img>
-                        <button>contact me</button>
+                        <button href="#contact-me">contact me</button>
                     </div>
                 </div>
             <Footer />

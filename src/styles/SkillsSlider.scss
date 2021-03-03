@@ -22,6 +22,10 @@
         grid-column-end: 3;
         grid-row-start: 2;
         @include styleDivButtons();
+        border-bottom: 10px solid $navy;
+        &:hover {
+            border-bottom: 10px solid $light-gray;
+        }
     }
 
     #tools {
@@ -29,6 +33,10 @@
         grid-column-end: 5;
         grid-row-start: 2;
         @include styleDivButtons();
+        border-bottom: 10px solid $navy;
+        &:hover {
+            border-bottom: 10px solid $light-gray;
+        }
     }
     #arrow-left {
         grid-column-start: 1;
@@ -36,6 +44,12 @@
         @include flexCenter(column);
         img {
             cursor: pointer;
+            &:hover {
+                transform: scale(1.2);
+            }
+            &:active {
+                transform: scale(1);
+            }
         }
     }
     #arrow-right {
@@ -44,7 +58,12 @@
         @include flexCenter(column);
         img {
             cursor: pointer;
-            transform: rotate(180deg);
+            &:hover {
+                transform: scale(1.2);
+            }
+            &:active {
+                transform: scale(1);
+            }
         }
     }
     #left {
