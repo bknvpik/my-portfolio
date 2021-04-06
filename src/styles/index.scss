@@ -1,3 +1,5 @@
+@import 'mediaQueries';
+
 //colours
 $light-gray: rgb(221, 221, 221);
 $charcoal: rgb(34, 40, 49);
@@ -43,6 +45,9 @@ header {
   grid-column-start: 2;
   font-family: $secondary-font;
   font-size: 70px;
+  @include responsive(phone) {
+    font-size: 35px;
+  }
 }
 
 footer {
@@ -51,6 +56,9 @@ footer {
       width: 3rem;
       height: auto;
       cursor: pointer;
+      @include responsive(phone) {
+        width: 2rem;
+    }
   }
 }
 

@@ -1,0 +1,72 @@
+@import 'index';
+@import 'mediaQueries';
+
+.skill {
+    margin: 1rem;
+    @include flexCenter(column);
+    opacity: 0.6;
+    &:hover {
+        opacity: 1;
+    }
+    @include responsive(phone) {
+        margin: 0.5rem;  
+    }
+}
+.img-container {
+    width: 6rem;
+    height: 6rem;
+    @include flexCenter(column);
+    @include responsive(big-desktop) {
+        width: 9rem;
+        height: 9rem;
+    }
+    @include responsive(tab-land) {
+        width: 7rem;
+        height: 7rem;
+    }
+    @include responsive(tab-port) {
+        width: 5rem;
+        height: 5rem;
+    }
+    @include responsive(phone) {
+        width: 3rem;
+        height: 3rem;    
+    }
+    img {
+        display: block;
+        width: 80%;
+    }
+}
+.name {
+    @include flexCenter(row);
+    visibility: hidden;
+    height: 1.5rem;
+    @include responsive(phone) {
+        height: 0.8rem;
+    }
+}
+.stars {
+    margin: 0;
+    @include flexCenter(column);
+    width: 6rem;
+    height: 2rem;
+    @include responsive(big-desktop) {
+        width: 9rem;
+        height: 4rem;
+    }
+    @include responsive(tab-land) {
+        width: 7rem;
+        height: 3rem;
+    }
+    @include responsive(tab-port) {
+        width: 5rem;
+        height: 2rem;
+    }
+    @include responsive(phone) {
+        width: 3rem;
+        height: 1rem;    
+    }
+    img {
+        width: 80%;
+    }
+}

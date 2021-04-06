@@ -1,14 +1,17 @@
 import React from 'react';
-import triangles from '../images/triangles.svg';
+import { Link } from 'react-scroll';
+import redTriangle from '../images/red-triangle.svg';
+import navyTriangle from '../images/navy-triangle.svg';
 import Footer from './Footer';
+import Typing from 'react-typing-animation';
+import { motion } from "framer-motion";
 
-const LandingPage = () => {
+const LandingPage = (props) => {
     return (
         <section>
             <div id="landing-page">
                 <header>
                     <a href="https://www.linkedin.com/in/bartosz-knapik-089532208/" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i></a>
-                    <a href="https://www.facebook.com/barteknapik/" target="_blank" rel="noreferrer"><i className="fab fa-facebook-square"></i></a>
                     <a href="https://github.com/bknvpik" target="_blank" rel="noreferrer"><i className="fab fa-github-square"></i></a>
                 </header>
                 <div id="landing-wrapper">
@@ -16,19 +19,55 @@ const LandingPage = () => {
                         <p id="hi">Hi, my name is</p>
                         <h1 id="my-name">Bartosz.</h1>
                         <div id="whoami">
-                            &#123;
-                            <br/>
-                                <div>I am learning to</div>
-                                <div>become a <span id="red">front</span>-<span id="navy">end</span> dev</div>
-                            &#125;
+                            <Typing>
+                                <div>{"{"}<br /><div id="indent">I am learning to become a <span id="navy">web </span><span id="red">developer</span></div>{"}"}</div>
+                            </Typing>
                         </div>
                     </div>
+                    <div className="img-container">
+                    <motion.div
+                        animate={{ scale: 1.5 }}
+                        transition={{ duration: 0.5 }}
+                        drag
+                        dragConstraints={{
+                        top: -20,
+                        left: -20,
+                        right: 20,
+                        bottom: 20,
+                        }}
+                    >
+                        <img src={redTriangle} alt=""></img>
+                    </motion.div>
+                    <motion.div
+                        animate={{ scale: 1.5 }}
+                        transition={{ duration: 0.5 }}
+                        drag
+                        dragConstraints={{
+                        top: -20,
+                        left: -20,
+                        right: 20,
+                        bottom: 20,
+                        }}
+                    >
+                        <img src={navyTriangle} alt=""></img>
+                    </motion.div>
+                    </div>
                     <div id="landing-right">
-                        <img src={triangles} alt=""></img>
-                        <button href="#contact-me">contact me</button>
+                        <Link
+                            to={"contact-me"} 
+                            smooth='easeInOutQuart'
+                            duration={2000}
+                        >
+                            <motion.button
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }}
+                            >
+                                contact me
+                            </motion.button>
+                        </Link>
                     </div>
                 </div>
-            <Footer />
+            <Footer target="about-me"/>
         </div>
       </section>
     );
