@@ -29,8 +29,8 @@ const projects = [
         info: "my portfolio website created using reactJS, html and css (scss)",
         infoHidden: "while developing this app i improved my react and css skills",
         repoLink: "https://github.com/bknvpik/my-portfolio",
-        preview: false,
-        previewLink: ""
+        preview: true,
+        previewLink: "https://bknvpik.github.io/my-portfolio"
     },
     {
         name: "tradey",

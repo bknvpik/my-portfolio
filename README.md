@@ -6,11 +6,11 @@ My own portfolio website, built with React, JavaScript, HTML and SCSS.
 
 ## Project Status
 
-This project is currently in development.
+This project is completed with awareness for future corrections.
 
 ## Project Preview
 
-TBD
+https://bknvpik.github.io/my-portfolio
 
 ## Installation and Setup Instructions
 
