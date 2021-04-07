@@ -25,6 +25,7 @@
         font-size: 30px;
         @include responsive(phone) {
             font-size: 20px;
+            grid-row-start: 3;
         }
     }
     #contact-form {
@@ -121,9 +122,6 @@
                 &:focus {
                     outline: none;
                 }
-                &::-webkit-input-placeholder {
-                    transform:translate3d(0,50px,0);
-                }
             }
         }
     }
@@ -193,8 +191,7 @@
                 font-size: 35px;
             }
             @include responsive(phone) {
-                font-size: 20px;
-                margin-top: 1rem;
+                display: none;
             }
         }
 

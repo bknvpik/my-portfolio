@@ -47,8 +47,8 @@ const stack = [
     {
         name: 'GIT',
         img: require('./images/skills_images/git.svg'),
-        stars: require('./images/skills_images/stars-1.svg')
-    },
+        stars: require('./images/skills_images/stars-1.5.svg')
+    }
 ]
 
 export {stack};

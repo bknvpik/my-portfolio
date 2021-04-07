@@ -9,8 +9,9 @@ const ContactMe = () => {
     const date = new Date();
     
     const [status, setStatus] = useState('');
-    const [isEmpty, setIsEmpty] = useState('');
-    const [validateEmail, setValidateEmail] = useState('');
+    const [isEmptyName, setIsEmptyName] = useState('');
+    const [isEmptyEmail, setIsEmptyEmail] = useState('');
+    const [IsEmptyMessage, setIsEmptyMessage] = useState('');
 
     function sendEmail(e) {
         e.preventDefault();
@@ -25,17 +26,21 @@ const ContactMe = () => {
 
     const validateForm = (e) => {
         e.preventDefault();
-        if(!isEmpty || !validateEmail)
-            setStatus("fields cannot be empty!");
+        if(!isEmptyName.length || !isEmptyEmail.length || !IsEmptyMessage.length)
+            setStatus("fiill all the fields!");
         else
             sendEmail(e);
     }
     const handleChangeName = (e) => {
-        setIsEmpty(e.target.value);
+        setIsEmptyName(e.target.value);
     }
 
     const handleChangeEmail = (e) => {
-        setValidateEmail(e.target.value);
+        setIsEmptyEmail(e.target.value);
+    }
+
+    const handleChangeMessage = (e) => {
+        setIsEmptyMessage(e.target.value);
     }
     
     return (
@@ -47,7 +52,7 @@ const ContactMe = () => {
                     <input type="text" name="email" placeholder="your e-mail" onChange={handleChangeEmail}></input>
                     <button type="submit">send message</button>
                     <div id="message-area">
-                        <textarea name="message" placeholder="your message"></textarea>
+                        <textarea name="message" placeholder="your message" onChange={handleChangeMessage}></textarea>
                     </div>
                 </form>
                 <div id="msg-status">{status}</div>

@@ -1,0 +1,222 @@
+@import 'index';
+
+.project-wrapper {
+    width: 100%;
+    height: 25%;
+    font-family: $primary-font;
+    .right {
+        width: 100%;
+        height: 100%;
+        @include flexCenter(row-reverse);
+        @include responsive(tab-port) {
+            @include flexCenter(column);
+        }
+        @include responsive(phone) {
+            @include flexCenter(column);
+        }
+        .project-info {
+            text-align: right;
+            align-items: flex-end;
+            @include responsive(tab-port) {
+                text-align: center;
+                align-items: center;
+            }
+            @include responsive(phone) {
+                text-align: center;
+                align-items: center;
+            }
+        }
+        a {
+            align-self: flex-start;
+            @include responsive(tab-port) {
+                align-self: center;
+            }
+            @include responsive(phone) {
+                align-self: center;
+            }
+        }
+    }
+    .left {
+        width: 100%;
+        height: 100%;
+        @include flexCenter(row);
+        @include responsive(tab-port) {
+            @include flexCenter(column);
+        }
+        @include responsive(phone) {
+            @include flexCenter(column);
+        }
+        .project-info {
+            text-align: left;
+            align-items: flex-start;
+            @include responsive(tab-port) {
+                text-align: center;
+                align-items: center;
+            }
+            @include responsive(phone) {
+                text-align: center;
+                align-items: center;
+            }
+        }
+        a {
+            align-self: flex-end;
+            @include responsive(tab-port) {
+                align-self: center;
+            }
+            @include responsive(phone) {
+                align-self: center;
+            }
+        }
+    }
+    .project-info {
+        width: 50%;
+        height: 100%;
+        font-size: 1.7rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        @include flexCenter(column);
+        @include responsive(tab-land) {
+            font-size: 2rem;
+            .hidden {
+                display: none;
+            }
+        }
+        @include responsive(tab-port) {
+            width: 100%;
+            height: 100%;
+            padding: 0.5rem;
+            font-size: 1.5rem;
+            .hidden {
+                display: none;
+            }
+        }
+        @include responsive(phone) {
+            width: 100%;
+            height: 100%;
+            padding: 0.2rem;
+            font-size: 1rem;
+            .hidden {
+                display: none;
+            }
+        }
+    }
+    .project-left {
+        min-width: 50%;
+        height: 100%;
+        @include flexCenter(row);
+        @include responsive(tab-port) {
+            width: 100%;
+            height: 40%;
+            @include flexCenter(column);
+        }
+        @include responsive(phone) {
+            width: 100%;
+            height: 30%;
+            @include flexCenter(column);
+        }
+    }
+    .project-right {
+        min-width: 50%;
+        height: 100%;
+        @include flexCenter(row-reverse);
+        @include responsive(tab-port) {
+            width: 100%;
+            height: 40%;
+            @include flexCenter(column);
+        }
+        @include responsive(phone) {
+            width: 100%;
+            height: 30%;
+            @include flexCenter(column);
+        }
+    }
+    .logo-container {
+        width: 50%;
+        min-height: 100%;
+        background: rgb(191, 191, 191);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-shadow: inset 0 0 10px gray;
+        -webkit-box-shadow: inset 0 0 10px gray;
+        box-shadow: inset 0 0 10px gray;
+        @include flexCenter(row);
+        img {
+            width: 30%;
+            @include responsive(tab-land) {
+                width: 50%;
+            }
+        }
+        @include responsive(tab-port) {
+            display: none;
+        }
+        @include responsive(phone) {
+            display: none;
+        }
+    }
+    .buttons {
+        width: 50%;
+        height: 100%;
+        @include flexCenter(column);
+        justify-content: space-between;
+        @include responsive(tab-port) {
+            @include flexCenter(row);
+            width: 100%;
+            height: 100%;
+        }
+        @include responsive(phone) {
+            @include flexCenter(row);
+            width: 100%;
+            height: 100%;
+        }
+        .title {
+            width: 100%;
+            height: 40%;
+            background: $charcoal;
+            color: $light-gray;
+            font-size: 2rem;
+            font-weight: bold;
+            @include flexCenter(row);
+            @include responsive(tab-land) {
+                font-size: 1.7rem;
+            }
+            @include responsive(tab-port) {
+                width: 40%;
+                height: 100%;
+                font-size: 2rem;
+            }
+            @include responsive(phone) {
+                width: 40%;
+                height: 100%;
+                font-size: 1rem;
+            }
+        }
+        a {
+            color: $light-gray;
+            width: 98%;
+            height: 28%;
+            font-size: 1.5rem;
+            font-weight: bold;
+            @include flexCenter(row);
+            @include responsive(tab-land) {
+                font-size: 1.6rem;
+            }
+            @include responsive(tab-port) {
+                width: 30%;
+                height: 100%;
+                font-size: 1.5rem;
+            }
+            @include responsive(phone) {
+                width: 30%;
+                height: 100%;
+                font-size: 0.8rem;
+            }
+        }
+        .preview-btn {
+            background: $red;
+        }
+        .repo-btn {
+            background: $navy;
+        }
+    }
+}

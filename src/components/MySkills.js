@@ -13,8 +13,13 @@ export const MySkills = () => {
                 <div id="skills-list">
                     <div className="skills">
                         <div className="skills-row">
-                            {stack.map( (skill) => (
-                                <Skill key={skill.name} img={skill.img.default} stars={skill.stars.default} name={skill.name} />
+                            {stack.map((skill) => (
+                                <Skill
+                                    key={skill.name}
+                                    img={skill.img.default}
+                                    stars={skill.stars.default}
+                                    name={skill.name}
+                                />
                             ))}
                         </div>
                     </div>

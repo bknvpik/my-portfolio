@@ -17,8 +17,8 @@
     height: 6rem;
     @include flexCenter(column);
     @include responsive(big-desktop) {
-        width: 9rem;
-        height: 9rem;
+        width: 8rem;
+        height: 8rem;
     }
     @include responsive(tab-land) {
         width: 7rem;
@@ -51,7 +51,7 @@
     width: 6rem;
     height: 2rem;
     @include responsive(big-desktop) {
-        width: 9rem;
+        width: 8rem;
         height: 4rem;
     }
     @include responsive(tab-land) {

@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import redTriangle from '../images/red-triangle.svg';
 import navyTriangle from '../images/navy-triangle.svg';
 import Footer from './Footer';
-import Typing from 'react-typing-animation';
+import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
 const LandingPage = (props) => {
@@ -16,12 +16,19 @@ const LandingPage = (props) => {
                 </header>
                 <div id="landing-wrapper">
                     <div id="landing-left">
-                        <p id="hi">Hi, my name is</p>
+                        <div id="hi">Hi, my name is</div>
                         <h1 id="my-name">Bartosz.</h1>
                         <div id="whoami">
-                            <Typing>
-                                <div>{"{"}<br /><div id="indent">I am learning to become a <span id="navy">web </span><span id="red">developer</span></div>{"}"}</div>
-                            </Typing>
+                            <Typewriter 
+                                options={{
+                                    strings: ['{<br />&nbsp&nbsp I am learning <br/>&nbsp&nbsp to become <br/>&nbsp&nbsp a <span id="navy">web </span><span id="red">developer</span>&nbsp&nbsp<br/>}'],
+                                    autoStart: true,
+                                    loop: true,
+                                    deleteSpeed: 20,
+                                    delay: 80
+                                    }}
+                            >
+                            </Typewriter>
                         </div>
                     </div>
                     <div className="img-container">
