@@ -1,0 +1,235 @@
+@import 'index';
+
+#contact-me {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 15% 15% 1fr 15% 15%;
+    grid-template-columns: 300px 1fr 300px;
+    position: relative;
+    @include responsive(tab-land) {
+        grid-template-columns: 150px 1fr 150px;
+    }
+    @include responsive(tab-port) {
+        grid-template-columns: 100px 1fr 100px;
+    }
+    @include responsive(phone) {
+        grid-template-rows: 15% 1fr 10% 15%;
+        grid-template-columns: 50px 1fr 50px;
+    }
+    #msg-status {
+        grid-column-start: 2;
+        grid-row-start: 4;
+        @include flexCenter(row);
+        font-family: $primary-font;
+        font-size: 30px;
+        @include responsive(phone) {
+            font-size: 20px;
+            grid-row-start: 3;
+        }
+    }
+    #contact-form {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        @include responsive(phone) {
+            grid-row-start: 2;
+            grid-template-columns: 1fr;
+            grid-template-rows: 15% 15% 1fr 15%;
+        }
+        input {
+            font-family: $secondary-font;
+            width: 99%;
+            height: 94%;
+            border: none;
+            padding: 0;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 3px 6px #00000029;
+            @include responsive(phone) {
+                font-size: 20px;
+                height: 90%;
+                width: 100%;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        input[name="email"] {
+            grid-row-start: 1;
+        }
+        input[name="name"] {
+            grid-row-start: 2;
+        }
+        button {
+            grid-row-start: 3;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            border: none;
+            position: absolute;
+            bottom: 0;
+            cursor: pointer;
+            background: $charcoal;
+            color: $light-gray;
+            font-size: 35px;
+            font-weight: bold;
+            width: 99%;
+            height: 94%;
+            box-shadow: 0 3px 6px #00000029;
+            font-family: $primary-font;
+            @include responsive(phone) {
+                font-size: 25px;
+                grid-row-start: 4;
+                height: 90%;
+                width: 100%;
+            }
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                background: $navy;
+            }
+        }
+        #message-area {
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            @include flexCenter(column);
+            align-items: flex-end;
+            position: relative;
+            @include responsive(phone) {
+                grid-row-start: 3;
+                grid-column-start: 1;
+            }
+            textarea {
+                font-family: $secondary-font;
+                padding: 0;
+                width: 99%;
+                height: 100%;
+                border: none;
+                resize: none;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 0 3px 6px #00000029;
+                @include responsive(phone) {
+                    font-size: 20px;
+                    height: 90%;
+                    width: 100%;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+    #footer {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        display: grid;
+        grid-template-columns: 300px 15% 1fr 15% 300px;
+        grid-template-rows: 1fr;
+        position: relative;
+        width: 100%;
+        max-height: 100%;
+        bottom: 0;
+        background-image: url('../images/footer.svg');
+        background-size: auto;
+        @include responsive(tab-land) {
+            grid-template-columns: 150px 20% 1fr 20% 150px;
+        }
+        @include responsive(tab-port) {
+            grid-template-columns: 100px 20% 1fr 20% 100px;
+        }
+        @include responsive(phone) {
+            grid-template-columns: 50px 15% 1fr 15% 50px;
+            grid-template-rows: 1fr;
+            grid-row-start: 4;
+        }
+        #social-section {
+            @include flexCenter(row);
+            justify-content: flex-start;
+            grid-column-start: 2;
+            font-size: 45px;
+            i {
+                @include flexCenter(row);
+                margin-right: 0.5rem;
+                cursor: pointer;
+                color: $light-gray;
+                font-size: 45px;
+                @include responsive(phone) {
+                    font-size: 25px;
+                }
+            }
+            .fa-linkedin {
+                &:hover {
+                  color: rgb(0, 119, 181)
+                }
+            }
+            .fa-github-square {
+                &:hover {
+                  color: rgb(23, 21, 21)
+                }
+            }
+        }
+        #enjoy {
+            @include flexCenter(row);
+            grid-row-start: 1;
+            grid-column-start: 3;
+            font-family: $primary-font;
+            font-size: 35px;
+            font-weight: bold;
+            color: $light-gray;
+            text-align: center;
+            @include responsive(tab-land) {
+                font-size: 40px;
+            }
+            @include responsive(tab-port) {
+                font-size: 35px;
+            }
+            @include responsive(phone) {
+                display: none;
+            }
+        }
+
+        #home {
+            grid-column-start: 4;
+            font-size: 45px;
+            @include flexCenter(row);
+            justify-content: flex-end;
+            color: $light-gray;
+            p {
+                font-family: $primary-font;
+                font-weight: bold;
+                font-size: 35px;
+                margin: 1rem;
+                @include responsive(tab-port) {
+                    display: none;
+                }
+                @include responsive(tab-port) {
+                    display: none;
+                }
+                @include responsive(phone) {
+                    display: none;
+                }
+            }
+            i {
+                @include flexCenter(row);
+                cursor: pointer;
+                color: $light-gray;
+                font-size: 45px;
+                @include responsive(phone) {
+                    font-size: 25px
+                }
+            }
+            .fa-caret-square-up {
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

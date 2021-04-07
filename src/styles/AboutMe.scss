@@ -1,4 +1,5 @@
 @import 'index';
+@import 'mediaQueries';
 
 #about-me {
     width: 100%;
@@ -6,12 +7,14 @@
     display: grid;
     grid-template-rows: 15% 1fr 15%;
     grid-template-columns: 300px 1fr 300px;
-    header {
-        grid-row-start: 1;
-        grid-column-start: 2;
-        font-family: $secondary-font;
-        font-size: 70px;
-        @include flexCenter(row);
+    @include responsive(tab-land) {
+        grid-template-columns: 150px 1fr 150px;
+    }
+    @include responsive(tab-port) {
+        grid-template-columns: 100px 1fr 100px;
+    }
+    @include responsive(phone) {
+        grid-template-columns: 50px 1fr 50px;
     }
     #about-me-wrapper {
         grid-row-start: 2;
@@ -22,20 +25,30 @@
             font-family: $primary-font;
             font-size: 50px;
             text-align: center;
+            @include responsive(tab-port) {
+                font-size: 40px;
+            }
+            @include responsive(phone) {
+                font-size: 22px;
+            }
         }
-        #img-container {
+        img {
+            height: 4rem;
             display: inline-block;
-            position: relative;
-            @include flexCenter(column);
-            img {
-                height: 4rem;
-                display: inline-block;
+            @include responsive(phone) {
+                height: 3rem;
             }
         }
         #hobbies {
             font-family: $primary-font;
             font-size: 50px;
             text-align: center;
+            @include responsive(tab-port) {
+                font-size: 40px;
+            }
+            @include responsive(phone) {
+                font-size: 22px;
+            }
         }    
     } 
     footer {

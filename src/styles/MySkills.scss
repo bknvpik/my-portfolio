@@ -1,0 +1,71 @@
+@import 'index';
+
+#my-skills {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: 15% 70% 15%;
+    @include responsive(tab-land) {
+        grid-template-columns: 150px 1fr 150px;
+    }
+    @include responsive(tab-port) {
+        grid-template-columns: 100px 1fr 100px;
+    }
+    @include responsive(phone) {
+        grid-template-columns: 50px 1fr 50px;
+    }
+    header {
+        grid-column-start: 2;
+        grid-row-start: 1;
+    }
+    #skills-bg {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        background-image: url('../images/skills-bg.svg');
+        background-size: cover;
+        background-position: center;
+    }
+    #skills-list {
+        grid-column-start: 2;
+        grid-row-start: 2;
+        width: 100%;
+        height: 100%;
+        @include flexCenter(column);
+        @include responsive(phone) {
+            flex-direction: row;
+        }
+    }
+    .skills {
+        font-family: $primary-font;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: $light-gray;
+        @include flexCenter(column);
+        @include responsive(big-desktop) {
+            font-size: 2.2rem;
+        }
+        @include responsive(tab-land) {
+            font-size: 1.8rem;
+        }
+        @include responsive(tab-port) {
+            font-size: 1.5rem;
+        }
+        @include responsive(phone) {
+            font-size: 0.8rem;
+        }
+    }
+    .skills-row {
+        @include flexCenter(row);
+        flex-flow: wrap;
+        @include responsive(phone) {
+            flex-direction: row;
+        }
+    }
+
+    footer {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+}

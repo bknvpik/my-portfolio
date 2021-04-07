@@ -1,3 +1,5 @@
+@import 'mediaQueries';
+
 //colours
 $light-gray: rgb(221, 221, 221);
 $charcoal: rgb(34, 40, 49);
@@ -21,6 +23,7 @@ body {
     margin: 0;
     background: $light-gray;
     color: $charcoal;
+    overflow: hidden;
 }
 
 section {
@@ -37,11 +40,32 @@ section {
   color: $navy;
 }
 
+header {
+  @include flexCenter(row);
+  grid-row-start: 1;
+  grid-column-start: 2;
+  font-family: $secondary-font;
+  font-size: 70px;
+  @include responsive(phone) {
+    font-size: 35px;
+  }
+}
+
 footer {
   @include flexCenter(row);
   img {
       width: 3rem;
       height: auto;
       cursor: pointer;
+      @include responsive(phone) {
+        width: 2rem;
+    }
   }
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: $charcoal;
 }
