@@ -10,7 +10,7 @@ const stack = [
         stars: require('./images/skills_images/stars-2.svg')
     },
     {
-        name: 'sass',
+        name: 'SASS',
         img: require('./images/skills_images/sass.svg'),
         stars: require('./images/skills_images/stars-1.5.svg')
     },

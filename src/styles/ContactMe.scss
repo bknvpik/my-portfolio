@@ -137,7 +137,7 @@
         max-height: 100%;
         bottom: 0;
         background-image: url('../images/footer.svg');
-        background-size: auto;
+        background-size: cover;
         @include responsive(tab-land) {
             grid-template-columns: 150px 20% 1fr 20% 150px;
         }

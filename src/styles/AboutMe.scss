@@ -15,6 +15,7 @@
     }
     @include responsive(phone) {
         grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: 15% 1fr;
     }
     #about-me-wrapper {
         grid-row-start: 2;

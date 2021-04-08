@@ -13,6 +13,7 @@
         grid-template-columns: 100px 1fr 100px;
     }
     @include responsive(phone) {
+        grid-template-rows: 15% 1fr;
         grid-template-columns: 50px 1fr 50px;
     }
     header {
