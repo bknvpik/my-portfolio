@@ -9,10 +9,10 @@ const MyProjects = () => {
     const inputRef = useRef();
 
     const scrollHandler = () => {
-            if(inputRef.current.getBoundingClientRect().top <= 0)
-            {
-                setIsOpen(true);
-            }
+        if(inputRef.current.getBoundingClientRect().top <= 0)
+        {
+            setIsOpen(true);
+        }
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollHandler, true);
@@ -22,8 +22,8 @@ const MyProjects = () => {
     }, []);
 
     return (
-        <section id="projects-section" ref={inputRef}>
-            <div id="my-projects">
+        <section id="projects-section">
+            <div id="my-projects" ref={inputRef}>
                 <Header navyText="my" redText="Projects"/>
                 <div id="projects">
                     {projects.map((project) => (

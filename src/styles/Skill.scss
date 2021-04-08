@@ -29,8 +29,8 @@
         height: 5rem;
     }
     @include responsive(phone) {
-        width: 3rem;
-        height: 3rem;    
+        width: 4rem;
+        height: 4rem;    
     }
     img {
         display: block;
@@ -63,7 +63,7 @@
         height: 2rem;
     }
     @include responsive(phone) {
-        width: 3rem;
+        width: 4rem;
         height: 1rem;    
     }
     img {

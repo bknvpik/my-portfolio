@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Link } from 'react-scroll';
 import redTriangle from '../images/red-triangle.svg';
 import navyTriangle from '../images/navy-triangle.svg';
@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Typewriter from 'typewriter-effect';
 import { motion } from "framer-motion";
 
-const LandingPage = (props) => {
+const LandingPage = () => {
     return (
         <section>
             <div id="landing-page">
@@ -80,4 +80,4 @@ const LandingPage = (props) => {
     );
 };
 
-export default LandingPage;
+export default forwardRef(LandingPage);
