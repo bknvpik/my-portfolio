@@ -8,6 +8,8 @@ import ScrollableAnchor, { goToAnchor } from 'react-scrollable-anchor';
 
 const App = () => {
 
+  goToAnchor('0');
+  
   const scrollHome = (e) => {
     if(e.deltaY > 0)
     { 
