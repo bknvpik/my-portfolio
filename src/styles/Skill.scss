@@ -21,8 +21,8 @@
         height: 8rem;
     }
     @include responsive(tab-land) {
-        width: 7rem;
-        height: 7rem;
+        width: 5rem;
+        height: 5rem;
     }
     @include responsive(tab-port) {
         width: 5rem;
@@ -44,6 +44,9 @@
     @include responsive(phone) {
         height: 0.8rem;
     }
+    @include responsive(tab-land) {
+        font-size: 1.2rem;
+    }
 }
 .stars {
     margin: 0;
@@ -55,8 +58,8 @@
         height: 4rem;
     }
     @include responsive(tab-land) {
-        width: 7rem;
-        height: 3rem;
+        width: 5rem;
+        height: 2rem;
     }
     @include responsive(tab-port) {
         width: 5rem;

@@ -27,7 +27,7 @@
             cursor: pointer;
             font-size: 45px;
             @include responsive(tab-land) {
-                font-size: 60px;
+                font-size: 45px;
             }
             @include responsive(tab-port) {
                 font-size: 40px;

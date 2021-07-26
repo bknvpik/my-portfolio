@@ -185,7 +185,7 @@
             color: $light-gray;
             text-align: center;
             @include responsive(tab-land) {
-                font-size: 40px;
+                font-size: 30px;
             }
             @include responsive(tab-port) {
                 font-size: 35px;
@@ -206,9 +206,6 @@
                 font-weight: bold;
                 font-size: 35px;
                 margin: 1rem;
-                @include responsive(tab-port) {
-                    display: none;
-                }
                 @include responsive(tab-port) {
                     display: none;
                 }
